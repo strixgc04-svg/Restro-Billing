@@ -4,7 +4,7 @@ import {
   DEFAULT_ROLE_PERMISSIONS,
   PERMISSIONS,
   STAFF_ROLES,
-} from '@nodedr-restaurant/types';
+} from '@hungry-pilot/types';
 
 // Deliberately not imported from src/modules/orders/pricing — the runtime
 // image only ships apps/backend/dist + prisma (see ARCHITECTURE.md /
@@ -46,7 +46,7 @@ async function main() {
     update: {},
     create: {
       id: 'demo-restaurant',
-      name: 'Nodedr Bistro (Demo)',
+      name: 'Blu Bistro (Demo)',
       currency: 'INR',
     },
   });

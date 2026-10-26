@@ -13,7 +13,7 @@ import type {
   TableLayoutUpdateDto,
   TableStatusDto,
   TableUpdateDto,
-} from '@nodedr-restaurant/types';
+} from '@hungry-pilot/types';
 import { PrismaService } from '../../prisma/prisma.service';
 import { RealtimeGateway } from '../../realtime/realtime.gateway';
 

@@ -1,0 +1,22 @@
+Hungry Pilot
+Copyright (C) 2026 Blu Studio
+
+Hungry Pilot is a modified version of Nodedr OrderRestro
+(https://github.com/Raktim94/nodedr-restaurant-pos).
+
+  Nodedr OrderRestro
+  Copyright (C) 2026 Nodedr Infotech Private Limited and Raktim Ranjit
+
+Both the original work and Blu Studio's modifications are licensed under the
+GNU Affero General Public License, version 3 only (AGPL-3.0-only); the full
+text is in LICENSE.
+
+Modifications by Blu Studio, starting 27 October 2026: rebranded the product
+as "Hungry Pilot by Blu Studio" (names, logo, icons, identifiers, links and
+documentation) and replaced the single wine/burgundy colour scheme with a
+white base and a user-selectable accent colour theme.
+
+Under AGPL-3.0 section 13, anyone who interacts with a modified version of this
+program over a network must be offered its complete corresponding source code.
+The in-app footer links to it ("Source code"); keep that link pointing at a
+public copy of the exact version you run.

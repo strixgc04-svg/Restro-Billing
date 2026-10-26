@@ -1,6 +1,6 @@
 "use client";
 
-import { KOT_NEXT_STATUS, type KotStatusDto } from "@nodedr-restaurant/types";
+import { KOT_NEXT_STATUS, type KotStatusDto } from "@hungry-pilot/types";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 

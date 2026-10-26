@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { registerSchema, type RegisterDto } from "@nodedr-restaurant/types";
+import { registerSchema, type RegisterDto } from "@hungry-pilot/types";
 import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -51,8 +51,9 @@ export default function SignupPage() {
             <Logo size={44} />
           </Link>
           <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-            Nodedr OrderRestro
+            Hungry Pilot
           </h1>
+          <p className="-mt-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">by Blu Studio</p>
           <p className="text-sm text-muted-foreground">Set up your restaurant</p>
         </div>
 

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Full-bleed variant for maskable PWA icons: the OS crops to its own shape,
+       so the glyph stays inside the central 80% safe zone. -->
+  <defs>
+    <linearGradient id="hp-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B6EF5"/>
+      <stop offset="0.55" stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="url(#hp-bg)"/>
+  <g transform="translate(32 33) scale(0.72) translate(-32 -33)">
+    <g fill="#FFFFFF">
+      <circle cx="32" cy="22.5" r="2.6"/>
+      <path d="M19 39.5a13 13 0 0 1 26 0z"/>
+      <rect x="15.5" y="41" width="33" height="3.6" rx="1.8"/>
+    </g>
+    <g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <path d="M17.5 31.5 8.5 28.6"/>
+      <path d="M17.6 35.4 10.6 33.7"/>
+      <path d="M18.2 39 13.2 38.3"/>
+      <path d="M46.5 31.5 55.5 28.6"/>
+      <path d="M46.4 35.4 53.4 33.7"/>
+      <path d="M45.8 39 50.8 38.3"/>
+    </g>
+  </g>
+</svg>

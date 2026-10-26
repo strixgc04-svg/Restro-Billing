@@ -6,7 +6,7 @@ import {
 import type {
   QuotationStatus,
   SupplierQuotationDto,
-} from '@nodedr-restaurant/types';
+} from '@hungry-pilot/types';
 import { PrismaService } from '../../prisma/prisma.service';
 
 const NEXT_STATUS: Record<QuotationStatus, QuotationStatus[]> = {

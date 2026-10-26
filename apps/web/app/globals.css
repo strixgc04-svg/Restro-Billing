@@ -50,43 +50,81 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* Accent palettes (theme picker: lib/theme/accents.ts). Each accent is four
+   raw values — a deep shade for light mode, a tint for dark mode, and the
+   text colour that sits on each — and every themed token below is derived
+   from them. All pairs were checked for WCAG AA (>= 4.5:1). Royal Blue is the
+   default when <html> has no (or an unknown) data-accent. */
+:root,
+:root[data-accent="royal"] {
+  --acc: #1D4ED8; --acc-fg: #FFFFFF; --acc-d: #60A5FA; --acc-d-fg: #0B1530;
+}
+:root[data-accent="crimson"] {
+  --acc: #C8102E; --acc-fg: #FFFFFF; --acc-d: #F87171; --acc-d-fg: #2A0A0A;
+}
+:root[data-accent="gold"] {
+  --acc: #A16207; --acc-fg: #FFFFFF; --acc-d: #FACC15; --acc-d-fg: #1F1600;
+}
+:root[data-accent="emerald"] {
+  --acc: #047857; --acc-fg: #FFFFFF; --acc-d: #34D399; --acc-d-fg: #022C22;
+}
+:root[data-accent="hotpink"] {
+  --acc: #D61F69; --acc-fg: #FFFFFF; --acc-d: #F472B6; --acc-d-fg: #2A0716;
+}
+:root[data-accent="purple"] {
+  --acc: #6D28D9; --acc-fg: #FFFFFF; --acc-d: #A78BFA; --acc-d-fg: #1A0B3D;
+}
+:root[data-accent="teal"] {
+  --acc: #0F766E; --acc-fg: #FFFFFF; --acc-d: #2DD4BF; --acc-d-fg: #042F2E;
+}
+:root[data-accent="orange"] {
+  --acc: #C2410C; --acc-fg: #FFFFFF; --acc-d: #FB923C; --acc-d-fg: #2A0F02;
+}
+:root[data-accent="wine"] {
+  --acc: #9F1239; --acc-fg: #FFFFFF; --acc-d: #FB7185; --acc-d-fg: #1F0A0F;
+}
+:root[data-accent="graphite"] {
+  --acc: #18181B; --acc-fg: #FFFFFF; --acc-d: #E4E4E7; --acc-d-fg: #18181B;
+}
+
 :root {
-  /* Nodedr OrderRestro — light palette. See DESIGN_SYSTEM.md for rationale
-     (wine/burgundy primary is the one deliberate accent choice). */
-  --background: #FBF9F8;
+  /* Hungry Pilot — light palette: a clean white base with neutral greys, so
+     the chosen accent is the only colour that carries brand. See
+     DESIGN_SYSTEM.md. */
+  --background: #FFFFFF;
   --foreground: #111827;
   --card: #FFFFFF;
   --card-foreground: #111827;
   --popover: #FFFFFF;
   --popover-foreground: #111827;
-  --primary: #9F1239;
-  --primary-foreground: #FFFFFF;
-  --secondary: #F5F1F0;
+  --primary: var(--acc);
+  --primary-foreground: var(--acc-fg);
+  --secondary: #F4F5F7;
   --secondary-foreground: #111827;
-  --muted: #F5F1F0;
+  --muted: #F4F5F7;
   --muted-foreground: #6B7280;
-  --accent: #FDF2F4;
-  --accent-foreground: #9F1239;
+  --accent: color-mix(in oklab, var(--acc) 7%, #FFFFFF);
+  --accent-foreground: var(--acc);
   --destructive: #EF4444;
   --success: #22C55E;
   --warning: #F59E0B;
-  --border: #ECE6E4;
-  --input: #E4DCDA;
-  --ring: #9F1239;
-  --chart-1: #9F1239;
+  --border: #E6E8EC;
+  --input: #DCDFE5;
+  --ring: var(--acc);
+  --chart-1: var(--acc);
   --chart-2: #22C55E;
   --chart-3: #F59E0B;
   --chart-4: #6366F1;
   --chart-5: #6B7280;
   --radius: 1rem;
-  --sidebar: #FFFDFC;
+  --sidebar: #FCFCFD;
   --sidebar-foreground: #111827;
-  --sidebar-primary: #9F1239;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #FDF2F4;
-  --sidebar-accent-foreground: #9F1239;
-  --sidebar-border: #ECE6E4;
-  --sidebar-ring: #9F1239;
+  --sidebar-primary: var(--acc);
+  --sidebar-primary-foreground: var(--acc-fg);
+  --sidebar-accent: color-mix(in oklab, var(--acc) 7%, #FFFFFF);
+  --sidebar-accent-foreground: var(--acc);
+  --sidebar-border: #E6E8EC;
+  --sidebar-ring: var(--acc);
 }
 
 .dark {
@@ -96,33 +134,33 @@
   --card-foreground: #F4F4F5;
   --popover: #151517;
   --popover-foreground: #F4F4F5;
-  --primary: #FB7185;
-  --primary-foreground: #1F0A0F;
+  --primary: var(--acc-d);
+  --primary-foreground: var(--acc-d-fg);
   --secondary: #1D1D20;
   --secondary-foreground: #F4F4F5;
   --muted: #1D1D20;
   --muted-foreground: #9CA3AF;
-  --accent: #2A151A;
-  --accent-foreground: #FB7185;
+  --accent: color-mix(in oklab, var(--acc-d) 14%, #0B0B0D);
+  --accent-foreground: var(--acc-d);
   --destructive: #F87171;
   --success: #34D399;
   --warning: #FBBF24;
   --border: #26262A;
   --input: #26262A;
-  --ring: #FB7185;
-  --chart-1: #FB7185;
+  --ring: var(--acc-d);
+  --chart-1: var(--acc-d);
   --chart-2: #34D399;
   --chart-3: #FBBF24;
   --chart-4: #818CF8;
   --chart-5: #9CA3AF;
   --sidebar: #111113;
   --sidebar-foreground: #F4F4F5;
-  --sidebar-primary: #FB7185;
-  --sidebar-primary-foreground: #1F0A0F;
-  --sidebar-accent: #2A151A;
-  --sidebar-accent-foreground: #FB7185;
+  --sidebar-primary: var(--acc-d);
+  --sidebar-primary-foreground: var(--acc-d-fg);
+  --sidebar-accent: color-mix(in oklab, var(--acc-d) 14%, #0B0B0D);
+  --sidebar-accent-foreground: var(--acc-d);
   --sidebar-border: #26262A;
-  --sidebar-ring: #FB7185;
+  --sidebar-ring: var(--acc-d);
 }
 
 /* Customer kiosk (/kiosk/*): always the light palette, whatever the device's
@@ -131,26 +169,28 @@
    utilities are unaffected. */
 .kiosk-root {
   color-scheme: light;
-  --background: #FBF9F8;
+  --background: #FFFFFF;
   --foreground: #111827;
   --card: #FFFFFF;
   --card-foreground: #111827;
   --popover: #FFFFFF;
   --popover-foreground: #111827;
-  --primary: #9F1239;
-  --primary-foreground: #FFFFFF;
-  --secondary: #F5F1F0;
+  --primary: var(--acc);
+  --primary-foreground: var(--acc-fg);
+  --secondary: #F4F5F7;
   --secondary-foreground: #111827;
-  --muted: #F5F1F0;
+  --muted: #F4F5F7;
   --muted-foreground: #4B5563;
-  --accent: #FDF2F4;
-  --accent-foreground: #9F1239;
+  --accent: color-mix(in oklab, var(--acc) 7%, #FFFFFF);
+  --accent-foreground: var(--acc);
   --destructive: #B91C1C;
   --success: #15803D;
   --warning: #B45309;
-  --border: #D9CFCC;
-  --input: #C9BDBA;
-  --ring: #9F1239;
+  --border: #D5D9E0;
+  --input: #C5CBD3;
+  --ring: var(--acc);
+  --gradient-primary: linear-gradient(135deg, var(--acc) 0%, color-mix(in oklab, var(--acc) 82%, #000) 100%);
+  --glow-primary: color-mix(in oklab, var(--acc) 50%, transparent);
   /* Explicit system fallbacks so the kiosk never renders in a serif face if the
      bundled web font is unavailable (offline start-up, blocked fonts CDN). */
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, "Segoe UI", Roboto,
@@ -235,15 +275,20 @@
    (rounded-*, bg-*, shadow-*) on a component still win over it — unlayered
    rules would silently beat every utility class.
    --------------------------------------------------------------------------- */
+/* The primary gradient only ever darkens from the accent (never lightens), so
+   button text keeps the contrast checked for the flat colour; the inset
+   highlight on buttons supplies the sheen instead. */
 :root {
-  --shadow-card: 0 1px 2px rgb(17 24 39 / 0.04), 0 8px 24px -12px rgb(76 14 34 / 0.10);
-  --shadow-card-hover: 0 2px 4px rgb(17 24 39 / 0.05), 0 16px 32px -14px rgb(76 14 34 / 0.18);
-  --gradient-primary: linear-gradient(135deg, #B3163F 0%, #9F1239 45%, #7A0E2C 100%);
+  --shadow-card: 0 1px 2px rgb(17 24 39 / 0.04), 0 8px 24px -12px color-mix(in oklab, var(--acc) 12%, transparent);
+  --shadow-card-hover: 0 2px 4px rgb(17 24 39 / 0.05), 0 16px 32px -14px color-mix(in oklab, var(--acc) 22%, transparent);
+  --gradient-primary: linear-gradient(135deg, var(--acc) 0%, color-mix(in oklab, var(--acc) 82%, #000) 100%);
+  --glow-primary: color-mix(in oklab, var(--acc) 50%, transparent);
 }
 .dark {
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 10px 28px -14px rgb(0 0 0 / 0.6);
-  --shadow-card-hover: 0 2px 4px rgb(0 0 0 / 0.45), 0 18px 36px -14px rgb(251 113 133 / 0.18);
-  --gradient-primary: linear-gradient(135deg, #FB7185 0%, #F43F5E 55%, #E11D48 100%);
+  --shadow-card-hover: 0 2px 4px rgb(0 0 0 / 0.45), 0 18px 36px -14px color-mix(in oklab, var(--acc-d) 18%, transparent);
+  --gradient-primary: linear-gradient(135deg, color-mix(in oklab, var(--acc-d) 88%, #fff) 0%, var(--acc-d) 55%, color-mix(in oklab, var(--acc-d) 85%, var(--acc)) 100%);
+  --glow-primary: color-mix(in oklab, var(--acc-d) 35%, transparent);
 }
 
 @layer base {
@@ -253,16 +298,14 @@
     font-feature-settings: "cv11", "ss01";
   }
   body {
-    background-image:
-      radial-gradient(60rem 28rem at 100% -10%, rgb(159 18 57 / 0.045), transparent 60%),
-      radial-gradient(48rem 24rem at -10% 110%, rgb(245 158 11 / 0.035), transparent 60%);
+    background-image: radial-gradient(60rem 28rem at 100% -10%, color-mix(in oklab, var(--primary) 4%, transparent), transparent 60%);
     background-attachment: fixed;
   }
   h1, h2, h3 {
     letter-spacing: -0.015em;
   }
   ::selection {
-    background: rgb(159 18 57 / 0.18);
+    background: color-mix(in oklab, var(--primary) 20%, transparent);
   }
   :focus-visible {
     outline: 2px solid var(--ring);
@@ -310,7 +353,7 @@
   [data-slot="button"][data-variant="default"],
   button[data-slot="button"].bg-primary {
     background-image: var(--gradient-primary);
-    box-shadow: 0 1px 0 rgb(255 255 255 / 0.18) inset, 0 6px 14px -6px rgb(159 18 57 / 0.55);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.18) inset, 0 6px 14px -6px var(--glow-primary);
     transition: filter 150ms ease, transform 150ms ease, box-shadow 150ms ease;
   }
   [data-slot="button"][data-variant="default"]:hover:not(:disabled) {

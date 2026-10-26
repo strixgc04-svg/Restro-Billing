@@ -1,0 +1,16 @@
+[Unit]
+Description=Hungry Pilot (Docker Compose)
+Documentation=https://hungrypilot.example.com/docs
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+TimeoutStartSec=900
+ExecStart=/usr/bin/docker compose --project-name hungry-pilot --env-file /etc/hungry-pilot/hungry-pilot.env -f /usr/lib/hungry-pilot/docker-compose.yml up -d --remove-orphans
+ExecStop=/usr/bin/docker compose --project-name hungry-pilot --env-file /etc/hungry-pilot/hungry-pilot.env -f /usr/lib/hungry-pilot/docker-compose.yml down
+
+[Install]
+WantedBy=multi-user.target

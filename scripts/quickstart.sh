@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
-# Nodedr OrderRestro quickstart — macOS & Linux.
+# Hungry Pilot quickstart — macOS & Linux.
 #
 # Checks whether Docker is installed and running; installs it if not
 # (Docker Desktop via Homebrew on macOS, Docker Engine via the official
 # get.docker.com script on Linux). Does the same for git (Homebrew on macOS,
 # the system package manager on Linux) if it's missing too. Then clones (or
-# updates) nodedr-restaurant-pos into ./nodedr-restaurant-pos and runs its
+# updates) hungry-pilot into ./hungry-pilot and runs its
 # installer (which generates a .env with random secrets on first run).
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/Raktim94/nodedr-restaurant-pos/master/scripts/quickstart.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/your_github_org/hungry-pilot/master/scripts/quickstart.sh | bash
 #
 # Safe to re-run: every step only acts if the previous one didn't already
-# succeed, and an existing ./nodedr-restaurant-pos checkout is updated in
+# succeed, and an existing ./hungry-pilot checkout is updated in
 # place rather than clobbered.
 set -euo pipefail
 
-REPO_URL="https://github.com/Raktim94/nodedr-restaurant-pos.git"
-REPO_DIR="nodedr-restaurant-pos"
+REPO_URL="https://github.com/your_github_org/hungry-pilot.git"
+REPO_DIR="hungry-pilot"
 SUDO=""
 
 install_docker_linux() {
@@ -121,7 +121,7 @@ if ! command -v git >/dev/null 2>&1; then
   esac
 fi
 
-echo "==> Getting nodedr-restaurant-pos..."
+echo "==> Getting hungry-pilot..."
 if [ -d "$REPO_DIR/.git" ]; then
   echo "Existing checkout found in ./$REPO_DIR — updating it instead of re-cloning."
   git -C "$REPO_DIR" pull --ff-only
@@ -130,5 +130,5 @@ else
 fi
 
 cd "$REPO_DIR"
-echo "==> Installing and starting Nodedr OrderRestro..."
+echo "==> Installing and starting Hungry Pilot..."
 $SUDO ./install.sh

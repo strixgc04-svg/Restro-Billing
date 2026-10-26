@@ -1,8 +1,7 @@
 "use client";
 
-import type { SessionUser } from "@nodedr-restaurant/types";
-import { LogOut, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import type { SessionUser } from "@hungry-pilot/types";
+import { LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
@@ -14,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLogout } from "@/hooks/use-auth";
+import { ThemePicker } from "./theme-picker";
 
 function initials(name?: string) {
   if (!name) return "?";
@@ -26,21 +26,12 @@ function initials(name?: string) {
 }
 
 export function UserMenu({ user }: { user?: SessionUser }) {
-  const { theme, setTheme } = useTheme();
   const logout = useLogout();
   const router = useRouter();
 
   return (
     <div className="flex items-center gap-2">
-      <button
-        type="button"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary"
-        aria-label="Toggle theme"
-      >
-        <Sun className="h-[18px] w-[18px] dark:hidden" />
-        <Moon className="hidden h-[18px] w-[18px] dark:block" />
-      </button>
+      <ThemePicker />
 
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-secondary">

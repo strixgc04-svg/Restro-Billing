@@ -16,17 +16,17 @@ before calling anything done.
 ## Color tokens (light)
 
 ```
---background:      #FAFAFA
+--background:      #FFFFFF   /* white base */
 --card:             #FFFFFF
---sidebar:          #FCFCFC
+--sidebar:          #FCFCFD
 --foreground:       #111827   /* primary text */
 --muted-foreground: #6B7280   /* secondary text */
---border:           #E5E7EB
+--border:           #E6E8EC
 --success:          #22C55E
 --warning:          #F59E0B
 --danger:           #EF4444
---primary:          #9F1239   /* wine/burgundy — see rationale below */
---primary-foreground: #FFFFFF
+--primary:          var(--acc)      /* the chosen accent — see below */
+--primary-foreground: var(--acc-fg)
 ```
 
 Dark mode (own token set, not `background * 0.1` math):
@@ -41,20 +41,25 @@ Dark mode (own token set, not `background * 0.1` math):
 --success:           #34D399
 --warning:           #FBBF24
 --danger:            #F87171
---primary:           #FB7185   /* brighter rose for dark-bg contrast */
---primary-foreground: #1F0A0F
+--primary:           var(--acc-d)    /* lighter tint of the accent */
+--primary-foreground: var(--acc-d-fg)
 ```
 
-**Primary accent decision (the one deliberate risk):** wine/burgundy
-instead of the expected SaaS indigo/blurple (Stripe, Linear) or restaurant
-cliché tomato-red. It's a considered nod to hospitality (wine lists, velvet
-banquettes, fine dining) that stays distinct from the danger-red already in
-the palette, and reads as premium rather than generic-dashboard-default —
-finalized directly rather than looped back for a color-swatch vote, since
-this is an internal operator tool, not a client-facing brand identity where
-that stakes-based ask-first call would apply. Revisit only if a real
-restaurant-brand pass (logo, physical signage) later demands matching an
-existing brand color instead.
+**Accent colours (theme picker).** Hungry Pilot keeps a white, neutral base
+and lets each device pick its accent from the palette icon in the top bar:
+Royal Blue (default, Blu Studio's brand colour), Crimson Red, Golden Yellow,
+Emerald Green, Hot Pink, Royal Purple, Ocean Teal, Tangerine, Burgundy and
+Midnight. Each accent is four raw values in `apps/web/app/globals.css`
+(`--acc`, `--acc-fg` for light mode; `--acc-d`, `--acc-d-fg` for dark), and
+every themed token — primary, ring, sidebar highlight, chart-1, the soft
+`--accent` tint, card shadows, the button gradient — is derived from them.
+Every pair is checked for WCAG AA (>= 4.5:1) both as button text and as text
+on white/dark surfaces, which is why "yellow" is a deep gold in light mode.
+To add an accent: add its four values under `:root[data-accent="<id>"]`, add
+it to `apps/web/lib/theme/accents.ts`, and check the contrast pairs. The
+choice is stored per device in `localStorage` (`hp-accent`) and applied
+before first paint by the inline script in `app/layout.tsx`. The customer
+kiosk always renders the light palette with the current accent.
 
 ## Typography
 

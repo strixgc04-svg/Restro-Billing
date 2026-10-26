@@ -2,17 +2,17 @@
 
 | Name | Role | Contact |
 |---|---|---|
-| Raktim Ranjit | Lead Maintainer | mail@raktimranjit.com · [@Raktim94](https://github.com/Raktim94) |
+| Blu Studio | Maintainer | support@hungrypilot.example.com |
 
 ## Copyright
 
-Copyright © 2026 [Nodedr Infotech Private Limited](https://www.nodedr.com/)
-and Raktim Ranjit. Licensed under the
+Hungry Pilot is © 2026 [Blu Studio](https://blustudio.example.com/). It is a
+modified version of [Nodedr OrderRestro](https://github.com/Raktim94/nodedr-restaurant-pos),
+Copyright © 2026 Nodedr Infotech Private Limited and Raktim Ranjit
+(see [`NOTICE`](./NOTICE)). Licensed under the
 [GNU Affero General Public License v3.0](./LICENSE) — see
 [`LICENSE`](./LICENSE) for the full text and [`README.md`](./README.md#license)
 for what that means in practice for users and contributors.
 
-Nodedr Infotech Private Limited builds and maintains Nodedr OrderRestro
-and its sister projects (see [`nodedr-pos`](https://github.com/Raktim94/nodedr-pos))
-as free, self-hosted software — no subscription, no vendor lock-in. See
+Blu Studio builds and maintains Hungry Pilot as free, self-hosted software — no subscription, no vendor lock-in. See
 [`CONTRIBUTING.md`](./CONTRIBUTING.md) for how to get involved.

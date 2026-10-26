@@ -1,18 +1,18 @@
 {
-  "name": "nodedr-orderrestro",
+  "name": "hungry-pilot",
   "private": true,
   "version": "0.1.0",
-  "description": "Nodedr OrderRestro — offline-first Restaurant Management System",
-  "author": "Raktim Ranjit <mail@raktimranjit.com> (https://github.com/Raktim94)",
+  "description": "Hungry Pilot — offline-first Restaurant Management System",
+  "author": "Blu Studio <support@hungrypilot.example.com> (https://blustudio.example.com/)",
   "license": "AGPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Raktim94/nodedr-restaurant-pos.git"
+    "url": "https://github.com/your_github_org/hungry-pilot.git"
   },
   "bugs": {
-    "url": "https://github.com/Raktim94/nodedr-restaurant-pos/issues"
+    "url": "https://github.com/your_github_org/hungry-pilot/issues"
   },
-  "homepage": "https://orderrestro.nodedr.com/",
+  "homepage": "https://hungrypilot.example.com/",
   "keywords": [
     "restaurant-management",
     "restaurant-pos",

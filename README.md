@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="apps/web/public/brand-lockup.png" alt="Nodedr OrderRestro" width="520">
+<img src="apps/web/public/brand/hungry-pilot-lockup.png" alt="Hungry Pilot by Blu Studio" width="520">
 
-<img src="docs/orderrestro-cover.jpg" alt="Illustrative evening scene in an independent restaurant" width="100%">
+<img src="docs/hungry-pilot-cover.jpg" alt="Illustrative evening scene in an independent restaurant" width="100%">
 
 **Open-source, self-hosted restaurant POS & management system** — billing
 with **UPI QR payments**, tables, kitchen display (KDS), reservations,
@@ -21,17 +21,17 @@ dine-in, takeaway, delivery and kitchen operations.
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![Status](https://img.shields.io/badge/status-active%20development-orange.svg)](./ROADMAP.md)
 
-Developed by [NodeDR Infotech Private Limited](https://www.nodedr.com/)
+Developed by [Blu Studio](https://blustudio.example.com/)
 
-**[Try OrderRestro](https://orderrestro.nodedr.com/)** · **[Case study](https://www.raktimranjit.com/projects/orderrestro)** · **[Maintainer: Raktim Ranjit](https://www.raktimranjit.com/)**
+**[Try Hungry Pilot](https://hungrypilot.example.com/)** · Based on [OrderRestro](https://github.com/Raktim94/nodedr-restaurant-pos) (AGPL-3.0)
 
 <p align="center">
-  <img src="docs/assets/hero-animated.svg" alt="Nodedr OrderRestro: animated overview with an illustrative sample screen" width="100%">
+  <img src="docs/assets/hero-animated.svg" alt="Hungry Pilot: animated overview with an illustrative sample screen" width="100%">
 </p>
 
 
 [Quick Start](#quick-start) ·
-[How to use](#how-to-use-orderrestro) ·
+[How to use](#how-to-use-hungry-pilot) ·
 [Full tutorial](./TUTORIAL.md) ·
 [Features](#features) ·
 [Screenshots](#screenshots) ·
@@ -45,7 +45,7 @@ Developed by [NodeDR Infotech Private Limited](https://www.nodedr.com/)
 
 ## What this is
 
-**Nodedr OrderRestro** is a purpose-built, offline-first Restaurant
+**Hungry Pilot** is a purpose-built, offline-first Restaurant
 Management System for restaurants, cafés, coffee shops, bakeries, fast
 food, fine dining, bars, food courts, cloud kitchens, and multi-branch
 chains. The whole stack — Postgres, API, and web app — runs on one local
@@ -53,8 +53,8 @@ server on the restaurant's own LAN: order-taking, billing, KDS, and
 printing all keep working with the WAN cable unplugged. No subscription,
 no forced cloud dependency, self-hosted by design.
 
-It's a sister project to [`nodedr-pos`](https://github.com/Raktim94/nodedr-pos)
-(the retail-shop POS), reusing its proven patterns — auth/session model,
+It builds on [OrderRestro](https://github.com/Raktim94/nodedr-restaurant-pos), itself a sister project to
+[`nodedr-pos`](https://github.com/Raktim94/nodedr-pos) (the retail-shop POS), reusing its proven patterns — auth/session model,
 receipt rendering, ESC/POS printing, currency-rounding discipline — but
 built as its own codebase, because restaurant floor/kitchen/reservation
 operations and retail shop billing are different enough domains that
@@ -179,7 +179,7 @@ roles) under **Settings** in the sidebar, photo upload on menu items, and
 an English/Spanish/French language switcher on the guest-facing QR
 ordering page and staff sidebar.
 
-## Why OrderRestro
+## Why Hungry Pilot
 
 - **UPI-first checkout (India)** — pick UPI and a QR for the exact bill
   amount appears at the till *and* on the customer-facing screen; a
@@ -194,7 +194,7 @@ ordering page and staff sidebar.
 - **India-ready** — GST (inclusive or exclusive), UPI, ₹ formatting, plus
   US sales tax, EU VAT and Spanish IVA for other markets.
 
-## How to use OrderRestro
+## How to use Hungry Pilot
 
 Start with the [screenshot-guided tutorial](./TUTORIAL.md) for the full
 first-run walkthrough. It covers sign-up, setup, daily service, and the
@@ -219,7 +219,7 @@ management tools with **56 screenshots of the app**.
 <p align="center">
   <a href="./TUTORIAL.md"><strong>Open the complete tutorial →</strong></a>
   &nbsp; · &nbsp;
-  <a href="./docs/orderrestro-user-manual.pdf">Download the user manual</a>
+  <a href="./docs/hungry-pilot-user-manual.pdf">Download the user manual</a>
 </p>
 
 ## Screenshots
@@ -247,7 +247,7 @@ management tools with **56 screenshots of the app**.
 ## FAQ
 
 **Is there a free, open-source restaurant POS I can self-host?**
-Yes — OrderRestro is AGPL-3.0 and installs with `docker compose up`, or as
+Yes — Hungry Pilot is AGPL-3.0 and installs with `docker compose up`, or as
 a one-click app on CasaOS / ZimaOS.
 
 **Does it support UPI payments and GST billing?**
@@ -344,7 +344,7 @@ already bundled, which is all this project requires.
 ### One-click install
 
 ```bash
-git clone https://github.com/Raktim94/nodedr-restaurant-pos.git && cd nodedr-restaurant-pos && ./install.sh
+git clone https://github.com/your_github_org/hungry-pilot.git && cd hungry-pilot && ./install.sh
 ```
 
 [`install.sh`](install.sh) generates a `.env` with random secrets (only if
@@ -365,11 +365,11 @@ If you'd rather run each step yourself (e.g. to set your own secrets instead
 of generated ones):
 
 ```bash
-git clone https://github.com/Raktim94/nodedr-restaurant-pos.git
-cd nodedr-restaurant-pos
+git clone https://github.com/your_github_org/hungry-pilot.git
+cd hungry-pilot
 cp .env.example .env        # edit JWT_SECRET / POSTGRES_PASSWORD for anything beyond local dev
 docker compose up -d --build
-docker exec nodedr-restaurant-backend npx ts-node prisma/seed.ts   # optional: demo data + login; upsert-based, safe to re-run
+docker exec hungry-pilot-backend npx ts-node prisma/seed.ts   # optional: demo data + login; upsert-based, safe to re-run
 ```
 
 ### Local dev (no Docker for the apps)
@@ -381,7 +381,7 @@ service from Docker Compose).
 pnpm install
 docker compose up -d postgres
 cp apps/backend/.env.example apps/backend/.env   # point DATABASE_URL at your Postgres
-pnpm --filter @nodedr-restaurant/types build
+pnpm --filter @hungry-pilot/types build
 cd apps/backend && npx prisma migrate dev && npx ts-node prisma/seed.ts && cd ../..
 pnpm dev   # runs backend (:4001) and web (:1995) together via Turborepo
 ```
@@ -415,7 +415,7 @@ docker compose up -d --build
 ```bash
 git pull
 pnpm install
-pnpm --filter @nodedr-restaurant/types build
+pnpm --filter @hungry-pilot/types build
 cd apps/backend && npx prisma migrate dev && cd ../..
 pnpm dev
 ```
@@ -493,8 +493,10 @@ This project follows the [Contributor Covenant](./CODE_OF_CONDUCT.md).
 
 ## License
 
-Copyright © 2026 [Nodedr Infotech Private Limited](https://www.nodedr.com/)
-and Raktim Ranjit. Licensed under the
+Hungry Pilot is © 2026 [Blu Studio](https://blustudio.example.com/). It is a
+modified version of [Nodedr OrderRestro](https://github.com/Raktim94/nodedr-restaurant-pos),
+Copyright © 2026 Nodedr Infotech Private Limited and Raktim Ranjit
+(see [`NOTICE`](./NOTICE)). Licensed under the
 [GNU Affero General Public License v3.0](./LICENSE) (AGPL-3.0). In short:
 you're free to self-host, use, and modify this software for your
 restaurant or business. If you modify it and run that modified version
@@ -508,15 +510,15 @@ See [`MAINTAINERS.md`](./MAINTAINERS.md) for project maintainers.
 ---
 
 <div align="center">
-<img src="apps/web/public/logo.png" alt="Nodedr OrderRestro" width="72">
+<img src="apps/web/public/logo.png" alt="Hungry Pilot" width="72">
 </div>
 
 
-## Case study
+## Credits
 
-Read the [OrderRestro case study](https://www.raktimranjit.com/projects/orderrestro) for the product background and design decisions.
-
-Maintainer: [Raktim Ranjit](https://www.raktimranjit.com/)
+Hungry Pilot is built on [Nodedr OrderRestro](https://github.com/Raktim94/nodedr-restaurant-pos) by Raktim Ranjit and
+Nodedr Infotech Private Limited. Read the [OrderRestro case study](https://www.raktimranjit.com/projects/orderrestro)
+for the original product background and design decisions.
 
 ---
 

@@ -1,6 +1,6 @@
 "use client";
 
-import type { KotStatusDto } from "@nodedr-restaurant/types";
+import type { KotStatusDto } from "@hungry-pilot/types";
 import { useEffect } from "react";
 import { BranchNotice } from "@/components/layout/branch-notice";
 import { PerformanceWidget } from "@/components/kds/performance-widget";

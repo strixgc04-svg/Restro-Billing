@@ -2,6 +2,6 @@
 set -e
 systemctl daemon-reload >/dev/null 2>&1 || true
 if [ "$1" = purge ]; then
-  echo "nodedr-orderrestro: your data stays in Docker volumes (nodedr-orderrestro_pg_data, nodedr-orderrestro_uploads_data, nodedr-orderrestro_state) and your settings and generated passwords in /etc/nodedr-orderrestro/nodedr-orderrestro.env, so a later reinstall picks up where you left off. To delete everything for good: sudo docker compose --project-name nodedr-orderrestro down -v ; sudo rm -rf /etc/nodedr-orderrestro" >&2
+  echo "hungry-pilot: your data stays in Docker volumes (hungry-pilot_pg_data, hungry-pilot_uploads_data, hungry-pilot_state) and your settings and generated passwords in /etc/hungry-pilot/hungry-pilot.env, so a later reinstall picks up where you left off. To delete everything for good: sudo docker compose --project-name hungry-pilot down -v ; sudo rm -rf /etc/hungry-pilot" >&2
 fi
 exit 0

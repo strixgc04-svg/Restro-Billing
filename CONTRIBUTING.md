@@ -1,4 +1,4 @@
-# Contributing to Nodedr OrderRestro
+# Contributing to Hungry Pilot
 
 First off — thank you for considering a contribution. This is a young,
 fast-moving project (Phases 0-3 of a 20-module scope are done; see
@@ -31,14 +31,14 @@ anything here is out of date, trust [`PROJECT.md`](./PROJECT.md) and
 
 This project follows the [Contributor Covenant](./CODE_OF_CONDUCT.md). By
 participating, you agree to uphold it. Report unacceptable behavior to
-**mail@raktimranjit.com**.
+**support@hungrypilot.example.com**.
 
 ## Maintainers & copyright
 
-See [`MAINTAINERS.md`](./MAINTAINERS.md) — Raktim Ranjit is the lead
-maintainer; project copyright is held jointly by
-[Nodedr Infotech Private Limited](https://www.nodedr.com/) and Raktim
-Ranjit. By submitting a PR, you agree your contribution is licensed under
+See [`MAINTAINERS.md`](./MAINTAINERS.md) — Blu Studio maintains Hungry Pilot.
+The original OrderRestro code is copyright Nodedr Infotech Private Limited and
+Raktim Ranjit; Blu Studio's modifications are copyright Blu Studio (see
+[`NOTICE`](./NOTICE)). By submitting a PR, you agree your contribution is licensed under
 the same [AGPL-3.0](./LICENSE) as the rest of the project; you retain
 copyright on your own contribution.
 
@@ -71,11 +71,11 @@ Docker for it.
 ### Option A — full stack via Docker
 
 ```bash
-git clone https://github.com/Raktim94/nodedr-restaurant-pos.git
-cd nodedr-restaurant-pos
+git clone https://github.com/your_github_org/hungry-pilot.git
+cd hungry-pilot
 cp .env.example .env                 # edit JWT_SECRET / POSTGRES_PASSWORD for anything beyond local dev
 docker compose up -d --build
-docker exec nodedr-restaurant-backend npx ts-node prisma/seed.ts   # first run only — demo data + login
+docker exec hungry-pilot-backend npx ts-node prisma/seed.ts   # first run only — demo data + login
 ```
 
 Open <http://localhost:1995> and sign in with `owner@demo.local` /
@@ -90,7 +90,7 @@ they are not published directly to the host.
 pnpm install
 docker compose up -d postgres                               # just the DB
 cp apps/backend/.env.example apps/backend/.env               # point DATABASE_URL at your Postgres
-pnpm --filter @nodedr-restaurant/types build
+pnpm --filter @hungry-pilot/types build
 cd apps/backend && npx prisma migrate dev && npx ts-node prisma/seed.ts && cd ../..
 pnpm dev   # runs backend (:4001) and web (:1995) together via Turborepo
 ```
@@ -246,7 +246,7 @@ PR.
 
 ## Questions & discussion
 
-Use [GitHub Discussions](https://github.com/Raktim94/nodedr-restaurant-pos/discussions)
+Use [GitHub Discussions](https://github.com/your_github_org/hungry-pilot/discussions)
 for "how do I…" / "why does X work this way" / general chat. Use Issues
 for concrete bugs and feature requests. Keep architecture debates in
 Discussions or a tagged issue rather than scattered across PR comments,
