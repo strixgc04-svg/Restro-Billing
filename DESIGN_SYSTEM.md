@@ -52,7 +52,8 @@ Emerald Green, Hot Pink, Royal Purple, Ocean Teal, Tangerine, Burgundy and
 Midnight. Each accent is four raw values in `apps/web/app/globals.css`
 (`--acc`, `--acc-fg` for light mode; `--acc-d`, `--acc-d-fg` for dark), and
 every themed token — primary, ring, sidebar highlight, chart-1, the soft
-`--accent` tint, card shadows, the button gradient — is derived from them.
+`--accent` tint, card shadows — is derived from them. Everything is a flat
+colour; the UI uses no gradients.
 Every pair is checked for WCAG AA (>= 4.5:1) both as button text and as text
 on white/dark surfaces, which is why "yellow" is a deep gold in light mode.
 To add an accent: add its four values under `:root[data-accent="<id>"]`, add

@@ -12,11 +12,6 @@ const words = ["Restaurant", "software", "you", "actually", "own."];
 export function Hero() {
   return (
     <section className="relative overflow-hidden px-4 pt-20 pb-24 sm:px-6 sm:pt-28">
-      {/* Ambient gradient glow — transform/opacity only, no layout cost */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[560px] bg-[radial-gradient(60%_50%_at_50%_0%,color-mix(in_oklch,var(--primary),transparent_88%),transparent)]"
-      />
 
       <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
         <motion.div

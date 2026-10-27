@@ -36,10 +36,6 @@ export default function SignupPage() {
 
   return (
     <main className="relative flex flex-1 items-center justify-center overflow-hidden bg-background px-4 py-10">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-[radial-gradient(50%_50%_at_50%_0%,color-mix(in_oklch,var(--primary),transparent_90%),transparent)]"
-      />
       <motion.div
         initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}

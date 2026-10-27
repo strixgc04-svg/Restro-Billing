@@ -25,8 +25,8 @@ export function AccentProvider({ children }: { children: React.ReactNode }) {
   const setAccent = useCallback((next: AccentId) => {
     document.documentElement.setAttribute("data-accent", next);
     const meta = document.querySelector('meta[name="theme-color"]');
-    const swatch = ACCENTS.find((a) => a.id === next);
-    if (meta && swatch) meta.setAttribute("content", swatch.to);
+    const entry = ACCENTS.find((a) => a.id === next);
+    if (meta && entry) meta.setAttribute("content", entry.swatch);
     try {
       localStorage.setItem(ACCENT_STORAGE_KEY, next);
     } catch {

@@ -1,13 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-label="Hungry Pilot by Blu Studio">
-  <defs>
-    <linearGradient id="hp-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3B6EF5"/>
-      <stop offset="0.55" stop-color="#1D4ED8"/>
-      <stop offset="1" stop-color="#1E3A8A"/>
-    </linearGradient>
-  </defs>
   <g transform="translate(12 12) scale(1.5)">
-    <rect width="64" height="64" rx="15" fill="url(#hp-bg)"/>
+    <rect width="64" height="64" rx="15" fill="#1D4ED8"/>
     <g fill="#FFFFFF">
       <circle cx="32" cy="22.5" r="2.6"/>
       <path d="M19 39.5a13 13 0 0 1 26 0z"/>

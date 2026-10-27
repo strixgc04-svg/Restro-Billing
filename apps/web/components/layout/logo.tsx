@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 // Hungry Pilot mark: a serving cloche with pilot wings. The tile paints with
-// the active accent's gradient, so the mark follows the theme picker; the
+// the active accent colour, so the mark follows the theme picker; the
 // static PNG/ICO icons (favicon, PWA, Windows, CasaOS) are rendered from
 // public/brand/hungry-pilot-mark.svg in Royal Blue.
 export function Logo({ className, size = 32 }: { className?: string; size?: number }) {
@@ -14,8 +14,7 @@ export function Logo({ className, size = 32 }: { className?: string; size?: numb
         width: size,
         height: size,
         borderRadius: (size * 15) / 64,
-        backgroundImage:
-          "linear-gradient(135deg, color-mix(in oklab, var(--acc) 82%, #fff), var(--acc) 55%, color-mix(in oklab, var(--acc) 75%, #000))",
+        backgroundColor: "var(--acc)",
       }}
     >
       <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden fill="none">

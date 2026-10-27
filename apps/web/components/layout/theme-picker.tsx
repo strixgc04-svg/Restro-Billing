@@ -53,7 +53,7 @@ export function ThemePicker() {
               <span
                 aria-hidden
                 className="h-4 w-4 shrink-0 rounded-full ring-1 ring-foreground/10"
-                style={{ backgroundImage: `linear-gradient(135deg, ${a.from}, ${a.to})` }}
+                style={{ backgroundColor: a.swatch }}
               />
               {a.label}
             </DropdownMenuRadioItem>

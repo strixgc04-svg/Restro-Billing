@@ -189,7 +189,6 @@
   --border: #D5D9E0;
   --input: #C5CBD3;
   --ring: var(--acc);
-  --gradient-primary: linear-gradient(135deg, var(--acc) 0%, color-mix(in oklab, var(--acc) 82%, #000) 100%);
   --glow-primary: color-mix(in oklab, var(--acc) 50%, transparent);
   /* Explicit system fallbacks so the kiosk never renders in a serif face if the
      bundled web font is unavailable (offline start-up, blocked fonts CDN). */
@@ -275,19 +274,16 @@
    (rounded-*, bg-*, shadow-*) on a component still win over it — unlayered
    rules would silently beat every utility class.
    --------------------------------------------------------------------------- */
-/* The primary gradient only ever darkens from the accent (never lightens), so
-   button text keeps the contrast checked for the flat colour; the inset
-   highlight on buttons supplies the sheen instead. */
+/* Flat colour throughout: buttons and surfaces use the solid accent, no
+   gradients. Only the shadows pick up a faint tint of the accent. */
 :root {
   --shadow-card: 0 1px 2px rgb(17 24 39 / 0.04), 0 8px 24px -12px color-mix(in oklab, var(--acc) 12%, transparent);
   --shadow-card-hover: 0 2px 4px rgb(17 24 39 / 0.05), 0 16px 32px -14px color-mix(in oklab, var(--acc) 22%, transparent);
-  --gradient-primary: linear-gradient(135deg, var(--acc) 0%, color-mix(in oklab, var(--acc) 82%, #000) 100%);
   --glow-primary: color-mix(in oklab, var(--acc) 50%, transparent);
 }
 .dark {
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 10px 28px -14px rgb(0 0 0 / 0.6);
   --shadow-card-hover: 0 2px 4px rgb(0 0 0 / 0.45), 0 18px 36px -14px color-mix(in oklab, var(--acc-d) 18%, transparent);
-  --gradient-primary: linear-gradient(135deg, color-mix(in oklab, var(--acc-d) 88%, #fff) 0%, var(--acc-d) 55%, color-mix(in oklab, var(--acc-d) 85%, var(--acc)) 100%);
   --glow-primary: color-mix(in oklab, var(--acc-d) 35%, transparent);
 }
 
@@ -296,10 +292,6 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-feature-settings: "cv11", "ss01";
-  }
-  body {
-    background-image: radial-gradient(60rem 28rem at 100% -10%, color-mix(in oklab, var(--primary) 4%, transparent), transparent 60%);
-    background-attachment: fixed;
   }
   h1, h2, h3 {
     letter-spacing: -0.015em;
@@ -352,7 +344,6 @@
   }
   [data-slot="button"][data-variant="default"],
   button[data-slot="button"].bg-primary {
-    background-image: var(--gradient-primary);
     box-shadow: 0 1px 0 rgb(255 255 255 / 0.18) inset, 0 6px 14px -6px var(--glow-primary);
     transition: filter 150ms ease, transform 150ms ease, box-shadow 150ms ease;
   }

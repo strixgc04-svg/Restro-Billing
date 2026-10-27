@@ -3,16 +3,16 @@
 // picker UI and validates what's read back from localStorage. Every accent was
 // checked for WCAG AA (>= 4.5:1) as button text and as text on white/dark.
 export const ACCENTS = [
-  { id: "royal", label: "Royal Blue", from: "#60A5FA", to: "#1D4ED8" },
-  { id: "crimson", label: "Crimson Red", from: "#F87171", to: "#C8102E" },
-  { id: "gold", label: "Golden Yellow", from: "#FACC15", to: "#A16207" },
-  { id: "emerald", label: "Emerald Green", from: "#34D399", to: "#047857" },
-  { id: "hotpink", label: "Hot Pink", from: "#F472B6", to: "#D61F69" },
-  { id: "purple", label: "Royal Purple", from: "#A78BFA", to: "#6D28D9" },
-  { id: "teal", label: "Ocean Teal", from: "#2DD4BF", to: "#0F766E" },
-  { id: "orange", label: "Tangerine", from: "#FB923C", to: "#C2410C" },
-  { id: "wine", label: "Burgundy", from: "#FB7185", to: "#9F1239" },
-  { id: "graphite", label: "Midnight", from: "#71717A", to: "#18181B" },
+  { id: "royal", label: "Royal Blue", swatch: "#1D4ED8" },
+  { id: "crimson", label: "Crimson Red", swatch: "#C8102E" },
+  { id: "gold", label: "Golden Yellow", swatch: "#A16207" },
+  { id: "emerald", label: "Emerald Green", swatch: "#047857" },
+  { id: "hotpink", label: "Hot Pink", swatch: "#D61F69" },
+  { id: "purple", label: "Royal Purple", swatch: "#6D28D9" },
+  { id: "teal", label: "Ocean Teal", swatch: "#0F766E" },
+  { id: "orange", label: "Tangerine", swatch: "#C2410C" },
+  { id: "wine", label: "Burgundy", swatch: "#9F1239" },
+  { id: "graphite", label: "Midnight", swatch: "#18181B" },
 ] as const;
 
 export type AccentId = (typeof ACCENTS)[number]["id"];
