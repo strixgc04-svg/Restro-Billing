@@ -21,13 +21,6 @@ export function BrandFooter() {
       >
         {BRAND.productName} <span className="font-normal">by {BRAND.companyName}</span>
       </a>
-      {/* AGPL-3.0 notice + source offer (see BRAND.upstream) — keep this visible. */}
-      <p className="text-[11px] leading-snug text-sidebar-foreground/55">
-        Based on {BRAND.upstream.name} · {BRAND.license} ·{" "}
-        <a href={BRAND.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
-          Source code
-        </a>
-      </p>
     </div>
   );
 }

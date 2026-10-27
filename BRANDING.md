@@ -96,10 +96,14 @@ an in-place upgrade target:
 
 - Keep `LICENSE` and `NOTICE`, including the original copyright line for
   Nodedr Infotech Private Limited and Raktim Ranjit.
-- Keep the "Based on OrderRestro · AGPL-3.0 · Source code" credit in the app
-  sidebar and marketing footer, and make "Source code" point at a public copy
-  of the exact version you run — AGPL section 13 requires offering the source
-  to everyone who uses the app over a network.
+- Keep the "Based on OrderRestro · Source code" credit in the marketing
+  footer (`apps/web/components/marketing/marketing-footer.tsx`), and make
+  "Source code" point at a public copy of the exact version you run — AGPL
+  section 13 requires offering the source to everyone who uses the app over a
+  network. The logged-in app (sidebar) no longer shows this line, so staff
+  who never see the marketing page have no in-app source link; if you serve
+  Hungry Pilot to other businesses, add one back somewhere they can reach
+  (for example the user menu or an About page).
 - You can sell, host and support Hungry Pilot, but your modified source must
   stay available under AGPL-3.0. This isn't legal advice; check with a lawyer
   for a commercial launch.
