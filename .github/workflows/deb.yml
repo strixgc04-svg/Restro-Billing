@@ -9,7 +9,7 @@ on:
   pull_request:
     paths: ["packaging/deb/**", ".github/workflows/deb.yml"]
   push:
-    branches: [master]
+    branches: [main]
     paths: ["packaging/deb/**", ".github/workflows/deb.yml"]
   workflow_dispatch:
     inputs:

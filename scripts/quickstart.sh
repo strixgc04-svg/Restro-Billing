@@ -9,14 +9,14 @@
 # installer (which generates a .env with random secrets on first run).
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/your_github_org/hungry-pilot/master/scripts/quickstart.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/strixgc04-svg/Restro-Billing/main/scripts/quickstart.sh | bash
 #
 # Safe to re-run: every step only acts if the previous one didn't already
 # succeed, and an existing ./hungry-pilot checkout is updated in
 # place rather than clobbered.
 set -euo pipefail
 
-REPO_URL="https://github.com/your_github_org/hungry-pilot.git"
+REPO_URL="https://github.com/strixgc04-svg/Restro-Billing.git"
 REPO_DIR="hungry-pilot"
 SUDO=""
 

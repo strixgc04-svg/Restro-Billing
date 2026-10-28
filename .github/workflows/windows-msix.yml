@@ -10,7 +10,7 @@ name: Windows MSIX build
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - 'windows/**'
       - '.github/workflows/windows-msix.yml'

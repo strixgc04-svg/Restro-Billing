@@ -71,7 +71,7 @@ Docker for it.
 ### Option A — full stack via Docker
 
 ```bash
-git clone https://github.com/your_github_org/hungry-pilot.git
+git clone https://github.com/strixgc04-svg/Restro-Billing.git hungry-pilot
 cd hungry-pilot
 cp .env.example .env                 # edit JWT_SECRET / POSTGRES_PASSWORD for anything beyond local dev
 docker compose up -d --build
@@ -170,7 +170,7 @@ on POS/KDS screens used under time pressure.
 
 ## Making a change
 
-1. Fork the repo and create a branch off `master`:
+1. Fork the repo and create a branch off `main`:
    `git checkout -b feat/short-description` (or `fix/`, `docs/`, `chore/`
    as appropriate).
 2. Keep the change scoped. A bug fix doesn't need a drive-by refactor; a
@@ -202,7 +202,7 @@ is more important than format. Keep the subject line under ~70 characters.
 
 ## Opening a pull request
 
-- Target the `master` branch.
+- Target the `main` branch.
 - Fill in the PR template (what changed, why, how you tested it).
 - Make sure `pnpm lint && pnpm typecheck && pnpm build` pass locally —
   see [Development setup](#development-setup).
@@ -246,7 +246,7 @@ PR.
 
 ## Questions & discussion
 
-Use [GitHub Discussions](https://github.com/your_github_org/hungry-pilot/discussions)
+Use [GitHub Discussions](https://github.com/strixgc04-svg/Restro-Billing/discussions)
 for "how do I…" / "why does X work this way" / general chat. Use Issues
 for concrete bugs and feature requests. Keep architecture debates in
 Discussions or a tagged issue rather than scattered across PR comments,

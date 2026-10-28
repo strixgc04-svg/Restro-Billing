@@ -11,13 +11,13 @@ Get from zero to your first UPI-paid order in about ten minutes, then set up sta
 You need a machine that stays on in the restaurant (a mini PC, an old laptop, a NAS or a VPS) with Docker. The database is created for you on first start.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/your_github_org/hungry-pilot/master/scripts/quickstart.sh | bash
+curl -fsSL https://raw.githubusercontent.com/strixgc04-svg/Restro-Billing/main/scripts/quickstart.sh | bash
 ```
 
 Or from a clone:
 
 ```bash
-git clone https://github.com/your_github_org/hungry-pilot.git
+git clone https://github.com/strixgc04-svg/Restro-Billing.git hungry-pilot
 cd hungry-pilot
 ./install.sh
 ```
@@ -287,7 +287,7 @@ Hungry Pilot has a REST API (`/api/v1`, docs at `/api/docs`), API keys, webhooks
 
 Everything lives in your Postgres volume. Use **Settings → Backup** for scheduled backups, and test a restore before you need one.
 
-Questions or bugs: [open an issue](https://github.com/your_github_org/hungry-pilot/issues).
+Questions or bugs: [open an issue](https://github.com/strixgc04-svg/Restro-Billing/issues).
 
 ---
 

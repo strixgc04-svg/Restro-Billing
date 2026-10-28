@@ -8,10 +8,10 @@ import { PrismaService } from '../../prisma/prisma.service';
 // hardening report's "unsafe URL handling / open redirects" check, which
 // this is deliberately built to keep passing.
 const DOWNLOAD_CHANNELS: Record<string, string> = {
-  github: 'https://github.com/your_github_org/hungry-pilot',
+  github: 'https://github.com/strixgc04-svg/Restro-Billing',
   'install-script':
-    'https://raw.githubusercontent.com/your_github_org/hungry-pilot/master/install.sh',
-  docker: 'https://github.com/your_github_org/hungry-pilot#one-click-install',
+    'https://raw.githubusercontent.com/strixgc04-svg/Restro-Billing/main/install.sh',
+  docker: 'https://github.com/strixgc04-svg/Restro-Billing#one-click-install',
   casaos: 'https://github.com/IceWhaleTech/CasaOS-AppStore',
 };
 

@@ -129,7 +129,7 @@ export default function ComplianceIndiaPage() {
           For questions about this software&rsquo;s architecture or
           security posture, open an issue on{" "}
           <a
-            href="https://github.com/your_github_org/hungry-pilot/issues"
+            href="https://github.com/strixgc04-svg/Restro-Billing/issues"
             className="text-primary underline underline-offset-4"
           >
             GitHub

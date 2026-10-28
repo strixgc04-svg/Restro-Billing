@@ -23,7 +23,7 @@ services:
       - hungry-pilot
 
   backend:
-    image: ghcr.io/your_github_org/hungry-pilot-backend:1.9.0
+    image: ghcr.io/strixgc04-svg/hungry-pilot-backend:1.9.0
     container_name: hungry-pilot-backend
     hostname: hungry-pilot-backend
     restart: unless-stopped
@@ -85,7 +85,7 @@ services:
             en_US: Auto-generated login security key. Created automatically on first launch — leave it alone.
 
   web:
-    image: ghcr.io/your_github_org/hungry-pilot-web:1.9.0
+    image: ghcr.io/strixgc04-svg/hungry-pilot-web:1.9.0
     container_name: hungry-pilot-web
     hostname: hungry-pilot-web
     restart: unless-stopped
@@ -141,12 +141,12 @@ x-casaos:
   author: Blu Studio
   developer: Blu Studio
   category: Finance
-  icon: https://cdn.jsdelivr.net/gh/your_github_org/hungry-pilot@master/casaos/icon.png
-  thumbnail: https://cdn.jsdelivr.net/gh/your_github_org/hungry-pilot@master/casaos/thumbnail.png
+  icon: https://cdn.jsdelivr.net/gh/strixgc04-svg/Restro-Billing@main/casaos/icon.png
+  thumbnail: https://cdn.jsdelivr.net/gh/strixgc04-svg/Restro-Billing@main/casaos/thumbnail.png
   screenshot_link:
-    - https://cdn.jsdelivr.net/gh/your_github_org/hungry-pilot@master/casaos/screenshot-1.png
-    - https://cdn.jsdelivr.net/gh/your_github_org/hungry-pilot@master/casaos/screenshot-2.png
-    - https://cdn.jsdelivr.net/gh/your_github_org/hungry-pilot@master/casaos/screenshot-3.png
+    - https://cdn.jsdelivr.net/gh/strixgc04-svg/Restro-Billing@main/casaos/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/strixgc04-svg/Restro-Billing@main/casaos/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/strixgc04-svg/Restro-Billing@main/casaos/screenshot-3.png
   title:
     en_US: Hungry Pilot
   tagline:
@@ -228,6 +228,6 @@ x-casaos:
       management with QR ordering, reservations, inventory, customer
       loyalty/CRM, and billing.
   website: "https://hungrypilot.example.com/"
-  repo: "https://github.com/your_github_org/hungry-pilot"
+  repo: "https://github.com/strixgc04-svg/Restro-Billing"
   support: "https://hungrypilot.example.com/contact"
-  docs: "https://github.com/your_github_org/hungry-pilot#readme"
+  docs: "https://github.com/strixgc04-svg/Restro-Billing#readme"

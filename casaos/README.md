@@ -21,7 +21,7 @@ don't need to wait for this to land in the official app store:
 2. Paste this URL (or the raw file contents):
 
    ```
-   https://raw.githubusercontent.com/your_github_org/hungry-pilot/master/casaos/docker-compose.yml
+   https://raw.githubusercontent.com/strixgc04-svg/Restro-Billing/main/casaos/docker-compose.yml
    ```
 
 3. **Before starting the app**, change the two placeholder secrets in the
@@ -30,7 +30,7 @@ don't need to wait for this to land in the official app store:
    `POSTGRES_PASSWORD` and the `backend` service's `DATABASE_URL`). Leaving
    the shipped placeholders is not safe beyond a quick local trial.
 4. Install. CasaOS pulls the pre-built
-   `ghcr.io/your_github_org/hungry-pilot-backend` and `...-web` images —
+   `ghcr.io/strixgc04-svg/hungry-pilot-backend` and `...-web` images —
    there is no build step, so it works even though CasaOS never touches
    this repo's source.
 5. Open it from the CasaOS dashboard, or go straight to
@@ -67,21 +67,21 @@ not `:latest`, tags). To publish a new version:
    `release_notes.en_US`.
 2. Run the **Publish Docker images** workflow
    (`.github/workflows/docker-publish.yml`) via `workflow_dispatch` with
-   that version, or just push to `master` — it also tags a build from the
+   that version, or just push to `main` — it also tags a build from the
    latest git tag automatically. It builds both images for `linux/amd64`
    **and** `linux/arm64` (a lot of CasaOS/ZimaOS boxes are ARM SBCs) and
    pushes them to **GHCR**, authenticated with the automatic
    `secrets.GITHUB_TOKEN` — no manually-created registry credential needed,
    same as sibling project nodedr-pos.
 3. Confirm both new tags exist at
-   `ghcr.io/your_github_org/hungry-pilot-backend` and
-   `ghcr.io/your_github_org/hungry-pilot-web` before updating this file —
+   `ghcr.io/strixgc04-svg/hungry-pilot-backend` and
+   `ghcr.io/strixgc04-svg/hungry-pilot-web` before updating this file —
    CasaOS installs will fail outright if the pinned tag doesn't exist yet.
 4. **First publish only:** GHCR packages default to private even when
    pushed from a public repo — a CasaOS install on someone else's box would
    get an auth error pulling a private image. Check/set visibility to
    Public once under each package's own Settings on GitHub
-   (`github.com/your_github_org?tab=packages` → the package → Package settings →
+   (`github.com/strixgc04-svg?tab=packages` → the package → Package settings →
    Change visibility). Not needed again on later pushes to the same package.
 
 ## Submitting to the official CasaOS App Store

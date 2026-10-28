@@ -30,7 +30,7 @@ services:
     # Same name CI publishes. `up --build` tags the local build with it, and
     # the in-app "Update now" button (see the `updater` service below) pulls
     # the published image of a newer version under it.
-    image: ghcr.io/your_github_org/hungry-pilot-backend:${APP_VERSION:-dev}
+    image: ghcr.io/strixgc04-svg/hungry-pilot-backend:${APP_VERSION:-dev}
     container_name: hungry-pilot-backend
     restart: unless-stopped
     environment:
@@ -107,7 +107,7 @@ services:
         # Next bakes rewrite destinations at BUILD time — this must be a
         # build ARG, not a runtime env (see apps/web/Dockerfile comment).
         BACKEND_URL: "http://backend:4000"
-    image: ghcr.io/your_github_org/hungry-pilot-web:${APP_VERSION:-dev}
+    image: ghcr.io/strixgc04-svg/hungry-pilot-web:${APP_VERSION:-dev}
     container_name: hungry-pilot-web
     restart: unless-stopped
     ports:
@@ -126,7 +126,7 @@ services:
   updater:
     build:
       context: ./updater
-    image: ghcr.io/your_github_org/hungry-pilot-updater:latest
+    image: ghcr.io/strixgc04-svg/hungry-pilot-updater:latest
     container_name: hungry-pilot-updater
     restart: unless-stopped
     environment:

@@ -8,7 +8,7 @@ import { downloadHref, totalDownloads } from "@/lib/downloads";
 import { useDownloadStats } from "@/hooks/use-download-stats";
 
 const INSTALL_COMMAND =
-  "git clone https://github.com/your_github_org/hungry-pilot.git && cd hungry-pilot && ./install.sh";
+  "git clone https://github.com/strixgc04-svg/Restro-Billing.git hungry-pilot && cd hungry-pilot && ./install.sh";
 
 const channels = [
   {

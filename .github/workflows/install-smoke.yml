@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: "17 4 * * 1"
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - "scripts/quickstart.*"
       - "install.sh"
@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: One-line install (as published)
         working-directory: ${{ runner.temp }}
-        run: curl -fsSL https://raw.githubusercontent.com/your_github_org/hungry-pilot/master/scripts/quickstart.sh | bash
+        run: curl -fsSL https://raw.githubusercontent.com/strixgc04-svg/Restro-Billing/main/scripts/quickstart.sh | bash
 
       - name: App answers on port 1995
         run: |

@@ -33,24 +33,23 @@ one.
 
 ## Placeholders to fill in before launch
 
-Until Blu Studio has a domain, support address and public repository, links use
-placeholders that can never resolve to someone else's site or code:
+The GitHub repository is set: **strixgc04-svg/Restro-Billing** (default branch
+`main`; Docker images publish as `ghcr.io/strixgc04-svg/hungry-pilot-*`).
+
+Until Blu Studio has a domain and support address, these links use
+placeholders that can never resolve to someone else's site:
 
 | Placeholder | Meaning |
 |---|---|
 | `https://hungrypilot.example.com` | product website (support page at `/contact`, docs at `/docs`, Linux installer at `/install-linux.sh`) |
 | `support@hungrypilot.example.com` | support / conduct-report email |
 | `https://blustudio.example.com` | Blu Studio's company site |
-| `your_github_org/hungry-pilot` | the public GitHub repository (also the GHCR image owner) |
 
-Replace them all in one command, then review the diff:
+Replace them in one command, then review the diff:
 
 ```bash
-scripts/set-brand-links.sh --website https://YOUR-SITE --company https://YOUR-COMPANY-SITE --email you@YOUR-DOMAIN --github OWNER/REPO
+scripts/set-brand-links.sh --website https://YOUR-SITE --company https://YOUR-COMPANY-SITE --email you@YOUR-DOMAIN
 ```
-
-Until then the in-app update checker simply reports no updates, and the
-"GitHub" / install links don't go anywhere useful.
 
 ## Other things only Blu Studio can supply
 

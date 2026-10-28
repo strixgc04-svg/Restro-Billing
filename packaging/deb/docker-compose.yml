@@ -17,7 +17,7 @@ services:
       timeout: 5s
       retries: 10
   backend:
-    image: ghcr.io/your_github_org/hungry-pilot-backend:@VERSION@
+    image: ghcr.io/strixgc04-svg/hungry-pilot-backend:@VERSION@
     container_name: hungry-pilot-backend
     restart: unless-stopped
     environment:
@@ -44,7 +44,7 @@ services:
       - 'c 189:* rmw'
       - 'c 180:* rmw'
   web:
-    image: ghcr.io/your_github_org/hungry-pilot-web:@VERSION@
+    image: ghcr.io/strixgc04-svg/hungry-pilot-web:@VERSION@
     container_name: hungry-pilot-web
     restart: unless-stopped
     ports:

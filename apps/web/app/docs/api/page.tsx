@@ -111,7 +111,7 @@ GET  /locations/:branchId/reservations/:id   (scope: reservations:read)`}</Code>
         <p>
           For the complete endpoint reference, error codes, and rate limits, see{" "}
           <a
-            href="https://github.com/your_github_org/hungry-pilot/blob/main/docs/integrations-api.md"
+            href="https://github.com/strixgc04-svg/Restro-Billing/blob/main/docs/integrations-api.md"
             className="text-primary underline underline-offset-4"
           >
             docs/integrations-api.md

@@ -92,7 +92,7 @@ export default function AccessibilityPage() {
           If you encounter an accessibility barrier anywhere in this product,
           please open an issue on{" "}
           <a
-            href="https://github.com/your_github_org/hungry-pilot/issues"
+            href="https://github.com/strixgc04-svg/Restro-Billing/issues"
             className="text-primary underline underline-offset-4"
           >
             GitHub

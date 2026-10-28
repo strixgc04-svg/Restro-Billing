@@ -344,7 +344,7 @@ already bundled, which is all this project requires.
 ### One-click install
 
 ```bash
-git clone https://github.com/your_github_org/hungry-pilot.git && cd hungry-pilot && ./install.sh
+git clone https://github.com/strixgc04-svg/Restro-Billing.git hungry-pilot && cd hungry-pilot && ./install.sh
 ```
 
 [`install.sh`](install.sh) generates a `.env` with random secrets (only if
@@ -365,7 +365,7 @@ If you'd rather run each step yourself (e.g. to set your own secrets instead
 of generated ones):
 
 ```bash
-git clone https://github.com/your_github_org/hungry-pilot.git
+git clone https://github.com/strixgc04-svg/Restro-Billing.git hungry-pilot
 cd hungry-pilot
 cp .env.example .env        # edit JWT_SECRET / POSTGRES_PASSWORD for anything beyond local dev
 docker compose up -d --build
